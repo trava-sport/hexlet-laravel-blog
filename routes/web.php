@@ -35,6 +35,27 @@ Route::post('articles', [ArticleController::class, 'store'])
 Route::get('articles/{id}', [ArticleController::class, 'show'])
     ->name('articles.show');
 
+Route::get('articles/{id}/edit', [ArticleController::class, 'edit'])
+    ->name('articles.edit');
+
+Route::patch('articles/{id}', [ArticleController::class, 'update'])
+    ->name('articles.update');
+
+Route::delete('articles/{id}', [ArticleController::class, 'destroy'])
+    ->name('articles.destroy');
+
+Route::get('article_categories/create', [ArticleCategoryController::class, 'create'])
+    ->name('article_categories.create');
+
+Route::post('article_categories', [ArticleCategoryController::class, 'store'])
+    ->name('article_categories.store');
+
+Route::get('article_categories/{id}/edit', [ArticleCategoryController::class, 'edit'])
+    ->name('article_categories.edit');
+
+Route::patch('article_categories/{id}', [ArticleCategoryController::class, 'update'])
+    ->name('article_categories.update');
+
 Route::get('article_categories', [ArticleCategoryController::class, 'index'])
     ->name('article_categories.index');
 
