@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+
+    public function category()
+    {
+        return $this->belongsTo(__NAMESPACE__ . '\ArticleCategory');
+    }
+
+    public function isPublished()
+    {
+        return $this->state == 'published';
+    }
 }
