@@ -9,6 +9,7 @@
 </head>
 <body>
 <div class="container mt-4">
+    <a href="{{ route('articles.create') }}">Добавить статью</a>
     <a href="{{ route('articles.index') }}">Статьи</a>
     <a href="{{ route('article_categories.index') }}">Категории статей</a>
 </div>
